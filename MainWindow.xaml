@@ -1,0 +1,27 @@
+<Window x:Class="VinylStorage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Vinyl Collection" Height="450" Width="700">
+    <Grid>
+        <Label Content="Suche (Interpret*in / Album):" HorizontalAlignment="Left" Margin="35,22,0,0" VerticalAlignment="Top" Width="208"/>
+        <TextBox x:Name="input" HorizontalAlignment="Left" Margin="35,48,0,0" TextWrapping="Wrap"
+                 VerticalAlignment="Top" Width="208" Height="38" TextChanged="input_TextChanged"/>
+
+        <Button x:Name="add"       Content="Add"    HorizontalAlignment="Left" Margin="35,120,0,0" VerticalAlignment="Top" Height="44" Width="208" Click="add_Click"/>
+        <Button x:Name="edit"      Content="Edit"   HorizontalAlignment="Left" Margin="35,180,0,0" VerticalAlignment="Top" Height="44" Width="208" Click="edit_Click"/>
+        <Button x:Name="DelButton" Content="Delete" HorizontalAlignment="Left" Margin="35,240,0,0" VerticalAlignment="Top" Height="44" Width="208" Click="DelButton_Click"/>
+
+        <DataGrid x:Name="output" Margin="270,24,20,20" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Interpret*in"     Binding="{Binding Artist}"     Width="*"/>
+                <DataGridTextColumn Header="Album"      Binding="{Binding AlbumTitle}" Width="*"/>
+                <DataGridTextColumn Header="Jahr"       Binding="{Binding Year}"       Width="60"/>
+                <DataGridTextColumn Header="Genre"      Binding="{Binding Genre}"      Width="80"/>
+                <DataGridTextColumn Header="Zustand"  Binding="{Binding Condition}"  Width="90"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
