@@ -43,8 +43,10 @@ This project grew out of a phonebook app I built during school. I liked the stru
 
 ## Planned
 
+- I was thinking maybe a GUI inspired by Y2K-Asthetic
 - Album covers visible in the main list view
 - Album descriptions pulled from Wikipedia in the edit window
+- Published Version for you to run from a .exe
 
 ---
 
